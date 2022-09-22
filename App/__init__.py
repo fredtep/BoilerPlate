@@ -12,7 +12,7 @@ def create_app(test_config=None):
     def home():
         return render_template(
             'home.html',
-            title="title",
+            title="Flask BoilerPlate",
             description="description"
             )
 
