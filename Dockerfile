@@ -5,4 +5,4 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 COPY . .
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "wsgi:create_app()"]
+CMD ["gunicorn", "--config", "gunicorn-cfg.py", "wsgi:app"]

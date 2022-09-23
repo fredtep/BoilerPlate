@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: boilerplate_app
+    build: .
+    volumes:
+      - ./:/app
+  nginx:
+    container_name: nginx
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
