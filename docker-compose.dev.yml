@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  web:
+  boilerplate_app:
     container_name: boilerplate_app
     build: .
     volumes:
@@ -14,3 +14,5 @@ services:
       - "5000:5000"
     volumes:
       - ./nginx:/etc/nginx/conf.d
+    depends_on:
+      - boilerplate_app
